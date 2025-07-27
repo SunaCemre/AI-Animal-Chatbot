@@ -1,0 +1,31 @@
+# BFS algorithm in Python
+# Adapted from https://www.programiz.com/dsa/graph-bfs
+
+import collections
+
+# BFS algorithm
+def bfs(graph, root):
+
+    visited, queue = set(), collections.deque([root])
+    visited.add(root)
+
+    while queue:
+        # Dequeue a vertex from queue
+        vertex = queue.popleft()
+        print(str(vertex) + " ", end="")
+        # If not visited, mark it as visited, and enqueue it
+        nextVertex=graph.get(vertex)
+        if nextVertex is not None:  
+            for neighbour in graph.get(vertex):
+                if neighbour not in visited:
+                    visited.add(neighbour)
+                    queue.append(neighbour)
+
+
+if __name__ == '__main__':
+    graph = {"A": ["B", "C"], "B": ["D", "E"], 
+             "C": ["F", "G"], "D":["H", "I"], 
+             "E":["J", "K"], "F":["L","M"], "G":["N", "O"]}
+    
+    print("Following is BFS Traversal: ")
+    bfs(graph, "A")

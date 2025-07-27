@@ -1,0 +1,55 @@
+mammal(cheetah)
+mammal(lion)
+mammal(giraffe)
+mammal(elephant)
+mammal(koala)
+mammal(wolf)
+mammal(dog)
+bird(flamingo)
+bird(penguin)
+bird(peacock)
+carnivore(lion)
+carnivore(cheetah)
+carnivore(wolf)
+carnivore(penguin)
+herbivore(elephant)
+herbivore(giraffe)
+herbivore(koala)
+"gestationperiod(giraffe,15)"
+"gestationperiod(elephant,22)"
+"topspeed(cheetah,70)"
+"topspeed(zebra,40)"
+"topspeed(dolphin,25)"
+"weight(tiger,300)"
+"weight(penguin,30)"
+"groupbehavior(wolf,pack)"
+"groupbehavior(gorilla,troop)"
+"livesin(polarbear,arctic)"
+"livesin(elephant,africa)"
+"livesin(elephant,asia)"
+"distinctivefeature(peacock,colorfultail)"
+"young(kangaroo,joey)"
+"scientificname(cheetah,acinonyxjubatus)"
+"scientificname(dog,canislupus)"
+"scientificname(flamingo,phoenicopterus)"
+"bird(x) -> hasfeathers(x)"
+"mammal(x) -> hasfur(x)"
+"carnivore(x) -> eatsmeat(x)"
+"herbivore(x) -> eatsplants(x)"
+"topspeed(x,y) -> fast(x)"
+"groupbehavior(x,pack) -> social(x)"
+"gestationperiod(x,y) -> mammal(x)"
+"carnivore(x) -> -herbivore(x)"
+"herbivore(x) -> -carnivore(x)"
+"mammal(x) -> -bird(x)"
+"bird(x) -> -mammal(x)"
+"hasfeathers(x) -> -hasfur(x)"
+"hasfur(x) -> -hasfeathers(x)"
+"eatsmeat(x) -> -eatsplants(x)"
+"eatsplants(x) -> -eatsmeat(x)"
+"social(x) -> -groupbehavior(x,solitary)"
+"groupbehavior(x,solitary) -> -social(x)"
+bird(robin)
+haspouch(kangaroo)
+
+hasstrips(zebra)

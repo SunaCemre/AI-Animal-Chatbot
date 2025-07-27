@@ -1,0 +1,52 @@
+mammal(cheetah)
+mammal(lion)
+mammal(giraffe)
+mammal(elephant)
+mammal(koala)
+mammal(wolf)
+mammal(dog)
+bird(flamingo)
+bird(penguin)
+bird(peacock)
+carnivore(lion)
+carnivore(cheetah)
+carnivore(wolf)
+carnivore(penguin)
+herbivore(elephant)
+herbivore(giraffe)
+herbivore(koala)
+gestationperiod(giraffe
+gestationperiod(elephant
+topspeed(cheetah
+topspeed(zebra
+topspeed(dolphin
+weight(tiger
+weight(penguin
+groupbehavior(wolf
+groupbehavior(gorilla
+livesin(polarbear
+livesin(elephant
+livesin(elephant
+distinctivefeature(peacock
+young(kangaroo
+scientificname(cheetah
+scientificname(dog
+scientificname(flamingo
+bird(x) -> hasfeathers(x)
+mammal(x) -> hasfur(x)
+carnivore(x) -> eatsmeat(x)
+herbivore(x) -> eatsplants(x)
+topspeed(x
+groupbehavior(x
+gestationperiod(x
+carnivore(x) -> -herbivore(x)
+herbivore(x) -> -carnivore(x)
+mammal(x) -> -bird(x)
+bird(x) -> -mammal(x)
+hasfeathers(x) -> -hasfur(x)
+hasfur(x) -> -hasfeathers(x)
+eatsmeat(x) -> -eatsplants(x)
+eatsplants(x) -> -eatsmeat(x)
+social(x) -> -groupbehavior(x
+groupbehavior(x
+cheetah is herbivore
